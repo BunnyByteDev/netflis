@@ -1,0 +1,20 @@
+/* Import Tailwind CSS base styles */
+@import "tailwindcss/base";
+
+/* Import Tailwind CSS components styles */
+@import "tailwindcss/components";
+
+/* Import Tailwind CSS utilities styles */
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
