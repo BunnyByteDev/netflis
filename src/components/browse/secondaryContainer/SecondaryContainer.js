@@ -10,14 +10,15 @@ const SecondaryContainer = () => {
   const upComingMovies = useUpcomingMovies();
   return (
     <div
-      className="  bg-black
+      className="  bg-black w-screen
     "
     >
       <div
         className="-mt-10 relative
+        w-screen 
       sm:mt-0
       lg:-mt-52
-      md:mt-0
+      md:-mt-14
       md:pl-12"
       >
         <MovieList title={"Now Playing"} movies={nowPlayingMovies} />

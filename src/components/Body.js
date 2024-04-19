@@ -1,26 +1,16 @@
-import {
-  RouterProvider,
-  createBrowserRouter,
-  useNavigate,
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "../components/login/Login";
 import MovieDetails from "../components/browse/secondaryContainer/MovieDetails";
 import Browse from "../components/browse/Browse";
-import { onAuthStateChanged } from "firebase/auth";
-import { useEffect } from "react";
-import { auth } from "../utils/firebase";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
     { path: "/", element: <Login /> },
     { path: "/browse", element: <Browse /> },
-    { path: "/movie", element: <MovieDetails /> },
+    { path: "browse/movie/:movieId", element: <MovieDetails /> },
   ]);
   return (
-    <div
-      className="bg-black
-    bg-cover"
-    >
+    <div>
       <RouterProvider router={appRouter} />
     </div>
   );

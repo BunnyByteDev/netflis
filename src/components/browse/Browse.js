@@ -7,7 +7,8 @@ const Browse = () => {
   return (
     <div
       className="bg-black
-    bg-cover "
+      relative overflow-hidden
+     "
     >
       <HeaderBrowse />
       <MainContainer />

@@ -9,6 +9,10 @@ const HeaderBrowse = () => {
   const navigate = useNavigate();
   const [showDropDown, setShowDropDown] = useState(false);
 
+  const handleClick = () => {
+    navigate("/browse");
+  };
+
   const handleSignout = () => {
     signOut(auth)
       .then(() => {
@@ -40,21 +44,28 @@ const HeaderBrowse = () => {
   z-10"
     >
       <img
+        onClick={handleClick}
         className="
       h-6
       sm:h-8
       md:h-12
+      cursor-pointer
       "
         src={LOGO}
         alt="logo"
       />
+
       <div className="">
         <div
           className="pr-12"
           onMouseEnter={() => setShowDropDown(true)}
           onMouseLeave={handleMouseLeave}
         >
-          <img className="w-10 h-10" alt="userIcon" src={USER_AVATAR} />
+          <img
+            className="h-8 rounded-md cursor-pointer"
+            alt="userIcon"
+            src={USER_AVATAR}
+          />
         </div>
         {showDropDown && <DropDownMenu handleSignout={handleSignout} />}{" "}
       </div>

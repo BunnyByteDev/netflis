@@ -1,19 +1,21 @@
 import VideoBackground from "./VideoBackground";
 import VideoTitle from "./VideoTitle";
-import useNowPlayingMovies from "../../../hooks/useNowPlayingMovies";
+import useMovieDetails from "../../../hooks/useMovieDetails";
 
 const MainContainer = () => {
-  const movies = useNowPlayingMovies();
-  if (!movies) return; //not render: also known as early return
-  const mainMovie = movies[0];
-  const { original_title, overview, id } = mainMovie;
+  const mainMovie = useMovieDetails("823464");
+  if (!mainMovie) return; //not render: also known as early return
+
+  const { title, overview, id, backdrop_path } = mainMovie;
   return (
-    <div
-      className="md:pt-0
-    bg-black"
-    >
-      <VideoTitle title={original_title} overview={overview} />
-      <VideoBackground movieId={id} />
+    <div className="">
+      <VideoTitle
+        title={title}
+        overview={overview}
+        backdrop={backdrop_path}
+        movieId={id}
+      />
+      <VideoBackground movieId={id} backdrop={backdrop_path} title={title} />
     </div>
   );
 };

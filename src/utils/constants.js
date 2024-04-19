@@ -9,7 +9,14 @@ export const USER_AVATAR =
   "https://occ-0-7556-116.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABT9VbXIU93Jd5N5pm9UD76VMx_wGXe5DFaceX4nBZug7r_idHoQn2ut68-04MBUPjaA2ok2Xd_ajvTN1e7frGJ1caj7KmhR1YwfQ.png?r=46a";
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w400";
+export const IMG_CDN_URL_200 = "https://image.tmdb.org/t/p/w200";
 
+export const IMG_CDN_URL_ORIGINAL = "https://image.tmdb.org/t/p/original";
+
+export const YOUTUBE_VIDEO_URL =
+  "https://www.youtube.com/embed/lV1OOlGwExM?si=t9b_1pMUfJG8pdtm";
+
+export const YOUTUBE_URL = "https://www.youtube.com/watch?v=";
 //TMDB
 
 export const API_OPTIONS = {
